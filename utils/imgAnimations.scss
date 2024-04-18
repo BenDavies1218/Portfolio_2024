@@ -1,0 +1,86 @@
+body {
+    section {
+        nav {
+            img#react {
+                transition: transform 5s ease;
+            }
+            img#react:hover {
+                transform: rotate(720deg);
+                transform-origin: center;
+            }
+            img#nextjs:hover {
+                background-image: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,0,0,0) 70%);
+                transition: background-image 5s;
+            }
+
+            img#postgresql:hover {
+                transform: rotate(-35deg) translateX(5px);
+                transform-origin: center;
+                transition: 0.5s ease-out;
+            }
+
+            #python-logo {
+                max-width: 60vw;
+                max-height: 60vh;
+                padding: 5px;
+                overflow: visible;
+                cursor: pointer;
+                
+                path {
+                  position: relative;
+                  fill: transparent;
+                  stroke-width: 5px;
+                  transition: all .2s ease-in-out;
+                  
+                  &:first-child {
+                    stroke: #3670A0;
+                    animation: border-move 2s linear forwards, fill-first 1s 2s linear forwards;
+                  }
+                  
+                  &:last-child {
+                    stroke: #FED140;
+                    animation: border-move 2s linear forwards, fill-second 1s 2s linear forwards;
+                  }
+                }
+                
+                &:hover {
+                  path:first-child {
+                    transform: translate(-4%, -4%);
+                    text-shadow: 0 0 20px #3670A0;
+                  }
+                  path:last-child {
+                    transform: translate(4%, 4%);
+                    box-shadow: 0 0 20px #FED140;
+                  }
+                }
+              }
+              
+              @keyframes border-move {
+                0% {
+                  stroke-dasharray: 0 1600;
+                }
+                100% {
+                  stroke-dasharray: 1600 1600;
+                }
+              }
+              
+              @keyframes fill-first {
+                0% {
+                  fill: transparent;
+                }
+                100% {
+                  fill: #3670A0;
+                }
+              }
+              
+              @keyframes fill-second {
+                0% {
+                  fill: transparent;
+                }
+                100% {
+                  fill: #FED140;
+                }
+              }
+        }
+    }
+}
