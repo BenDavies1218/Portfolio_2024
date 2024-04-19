@@ -1,46 +1,128 @@
 @import url("https://fonts.googleapis.com/css2?family=Antonio:wght@600&family=Arvo:ital@0;1&family=Cutive&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Vast+Shadow&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Antonio:wght@600&family=Arvo:ital@0;1&family=Cutive&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sedan:ital@0;1&family=Vast+Shadow&display=swap");
-body section nav img#react {
+body div nav img#mongodb:hover {
+  transform: rotateY(180deg);
+  transition: transform 1s ease-in-out;
+}
+body div nav .image-container {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  position: relative;
+  transition: background-color 1s ease;
+}
+body div nav .image-container img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0%;
+  left: -5%;
+  transition: transform 2s ease;
+}
+body div nav .image-container:hover img {
+  animation: rotateImage 1s linear forwards;
+}
+body div nav .image-container::before {
+  cursor: pointer;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 44%;
+  width: 3px;
+  height: 100%;
+  background-color: #2C1A06;
+  z-index: 1;
+  opacity: 0;
+  transition: transform 1s ease-out;
+}
+body div nav .image-container:hover::before {
+  opacity: 1;
+  transform: rotateZ(360deg);
+}
+@keyframes rotateImage {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(180deg);
+  }
+}
+body div nav img#discord:hover {
+  transform: rotate(1440deg);
   transition: transform 5s ease;
 }
-body section nav img#react:hover {
+body div nav .github {
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+body div nav .github:hover #eye, body div nav .github:hover #eye2 {
+  background-color: antiquewhite;
+  transition: background-color 0.5s ease;
+}
+body div nav .github #eye {
+  cursor: pointer;
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: #2C1A06;
+  z-index: 2;
+}
+body div nav .github #eye2 {
+  cursor: pointer;
+  position: absolute;
+  top: 25px;
+  left: 37px;
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: #2C1A06;
+  z-index: 2;
+}
+body div nav img#react {
+  transition: transform 5s ease;
+}
+body div nav img#react:hover {
   transform: rotate(720deg);
   transform-origin: center;
 }
-body section nav img#nextjs:hover {
+body div nav img#nextjs:hover {
   background-image: radial-gradient(circle, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 70%);
   transition: background-image 5s;
 }
-body section nav img#postgresql:hover {
+body div nav img#postgresql:hover {
   transform: rotate(-35deg) translateX(5px);
   transform-origin: center;
   transition: 0.5s ease-out;
 }
-body section nav #python-logo {
+body div nav #python-logo {
   max-width: 60vw;
   max-height: 60vh;
   padding: 5px;
   overflow: visible;
 }
-body section nav #python-logo path {
+body div nav #python-logo path {
   position: relative;
   fill: transparent;
   stroke-width: 5px;
   transition: all 0.2s ease-in-out;
 }
-body section nav #python-logo path:first-child {
+body div nav #python-logo path:first-child {
   stroke: #3670A0;
   animation: border-move 2s linear forwards, fill-first 1s 2s linear forwards;
 }
-body section nav #python-logo path:last-child {
+body div nav #python-logo path:last-child {
   stroke: #FED140;
   animation: border-move 2s linear forwards, fill-second 1s 2s linear forwards;
 }
-body section nav #python-logo:hover path:first-child {
+body div nav #python-logo:hover path:first-child {
   transform: translate(-4%, -4%);
   text-shadow: 0 0 20px #3670A0;
 }
-body section nav #python-logo:hover path:last-child {
+body div nav #python-logo:hover path:last-child {
   transform: translate(4%, 4%);
   box-shadow: 0 0 20px #FED140;
 }
@@ -73,6 +155,10 @@ body section nav #python-logo:hover path:last-child {
   font-family: Dune Rise;
   src: url(./images/Dune_Rise.otf);
 }
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0px 0px;
   padding: 0px;
@@ -87,8 +173,11 @@ body #name {
   font-size: 48px;
   font-family: Dune Rise;
   position: absolute;
-  top: 5%;
-  left: 35%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
   z-index: 2;
 }
 body #explore {
@@ -157,14 +246,10 @@ body button:hover {
 body button:hover::after {
   clip-path: polygon(calc(100% - var(--border-width)) calc(100% - (var(--edge-size) + var(--border-width) * 0.5)), calc(100% - var(--border-width)) var(--border-width), calc(100% - var(--border-width)) var(--border-width), calc(100% - var(--border-width)) calc(100% - (var(--edge-size) + var(--border-width) * 0.5)), calc(100% - (var(--edge-size) + var(--border-width) * 0.5)) calc(100% - var(--border-width)), calc(100% - (var(--edge-size) + var(--border-width) * 0.5)) calc(100% - var(--border-width)));
 }
-body section#s1 {
-  background-color: #06182c;
-  width: 100%;
-  height: 800px;
-}
-body section#s1 nav {
+body div nav {
   background-color: #2C1A06;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
   border: 10px solid darkgray;
@@ -172,25 +257,37 @@ body section#s1 nav {
   margin-top: -5px;
   padding: 10px;
 }
-body section#s1 nav .skill:hover {
+body div nav .skill:hover {
   cursor: pointer;
 }
+body section#s1 {
+  background-color: #06182c;
+  width: 100dvw;
+  height: fit-content;
+  min-height: 1000px;
+  display: flex;
+  justify-content: center;
+}
 body section#s1 aside {
+  height: fit-content;
   border: 10px solid black;
   border-radius: 50px;
   background-color: silver;
-  width: 90%;
+  width: 80%;
   height: 80%;
   display: flex;
   justify-content: center;
   padding: 20px 20px;
-  margin: 50px 80px;
+  margin: 50px 0%;
 }
 body section#s1 aside #content {
+  min-width: 300px;
   width: 50%;
   background-color: #06182c;
   border-radius: 50px;
   border: 10px solid #2C1A06;
+  min-height: 400px;
+  height: fit-content;
 }
 body section#s1 aside #content h2 {
   text-align: center;
@@ -200,7 +297,7 @@ body section#s1 aside #content h2 {
   letter-spacing: 2px;
 }
 body section#s1 aside #content p {
-  padding: 50px 20px;
+  padding: 0px 20px;
   color: silver;
   font-size: 22px;
   letter-spacing: 1px;
@@ -220,6 +317,37 @@ body section#s1 aside #text h2 {
   text-align: left;
   color: black;
   letter-spacing: 2px;
+}
+
+@media screen and (max-width: 992px) {
+  body div section#s1 aside {
+    flex-wrap: wrap;
+    margin: 20px 10px;
+    padding: 20px 0px;
+  }
+  body div section#homeSection {
+    height: 600px;
+  }
+  body div section#homeSection canvas {
+    height: 600px;
+    width: 100%;
+  }
+  body div section#homeSection a {
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  body div section#homeSection #explore {
+    top: 25%;
+  }
+  body div section#homeSection #projects {
+    top: 35%;
+  }
+  body div section#homeSection #contact {
+    top: 45%;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

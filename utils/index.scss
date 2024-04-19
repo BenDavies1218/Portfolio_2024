@@ -6,7 +6,9 @@
     font-family: Dune Rise;
     src: url(./images/Dune_Rise.otf)
 }
-
+html {
+    scroll-behavior: smooth;
+}
 body {
     margin: 0px 0px;
     padding: 0px;
@@ -23,8 +25,11 @@ body {
         font-size: 48px;
         font-family: Dune Rise;
         position: absolute;
-        top: 5%;
-        left: 35%;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
         z-index: 2;
     }
     
@@ -129,15 +134,11 @@ body {
             calc(100% - var(--border-width))
         );
     }
-    section#s1 {
-        // #2C1A06
-        background-color: #06182c;
-        width: 100%;
-        height: 800px;
-        
+    div {
         nav {
             background-color: #2C1A06;
-            display: flex; 
+            display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             gap: 40px;
             border: 10px solid darkgray;
@@ -149,23 +150,36 @@ body {
                 cursor: pointer;
             }
         }
+    }
+    section#s1 {
+        // #2C1A06
+        background-color: #06182c;
+        width: 100dvw;
+        height: fit-content;
+        min-height: 1000px;
+        display: flex;
+        justify-content: center;
 
         aside {
+            height: fit-content;
             border: 10px solid black;
             border-radius: 50px;
             background-color: silver;
-            width: 90%;
+            width: 80%;
             height: 80%;
             display: flex;
             justify-content: center;
             padding: 20px 20px;
-            margin: 50px 80px;
+            margin: 50px 0%;
             
             #content {
+                min-width: 300px;
                 width: 50%;
                 background-color: #06182c;
                 border-radius: 50px;
                 border: 10px solid #2C1A06;
+                min-height: 400px;
+                height: fit-content;
 
                 h2 {
                     text-align: center;
@@ -176,7 +190,7 @@ body {
                 }
 
                 p {
-                    padding: 50px 20px;
+                    padding: 0px 20px;
                     color: silver;
                     font-size: 22px;
                     letter-spacing: 1px;
@@ -204,4 +218,38 @@ body {
             
         }
     }
+}
+
+@media screen and (max-width: 992px) {
+    body div section#s1 aside {
+        flex-wrap: wrap;
+        margin: 20px 10px;
+        padding: 20px 0px;
+    }
+
+    body div section#homeSection {
+        height: 600px;
+        canvas {
+            height: 600px;
+            width: 100%;
+        }
+
+        a {
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            text-align: center;
+        }
+        #explore {
+            top:25%;
+        }
+        #projects {
+            top: 35%;
+        }
+        #contact {
+            top: 45%;
+        }
+    }
+
 }
