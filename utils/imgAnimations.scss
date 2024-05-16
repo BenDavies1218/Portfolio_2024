@@ -1,180 +1,185 @@
 body {
-    div {
-      nav {
+  div {
+    nav {
+      img#mongodb:hover {
+        transform: rotateY(180deg);
+        transition: transform 1s ease-in-out;
+      }
+      .image-container {
+        width: 60px;
+        height: 60px;
+        overflow: hidden;
+        position: relative;
+        transition: background-color 1s ease;
+      }
 
-        img#mongodb:hover {
-          transform: rotateY(180deg);
-          transition: transform 1s ease-in-out;
-        }
-        .image-container {
-          width: 60px;
-          height: 60px;
-          overflow: hidden;
-          position: relative;
-          transition: background-color 1s ease;
-        }
-        
-        .image-container img {
-          width: 100%;
-          height: auto;
-          position: absolute;
-          top: 0%;
-          left: -5%;
-          transition: transform 2s ease;
-        }
-        
-        .image-container:hover img {
-          animation: rotateImage 1s linear forwards;
-        }
-        
-        .image-container::before {
-          cursor: pointer;
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 44%;
-          width: 3px;
-          height: 100%;
-          background-color: #2C1A06;
-          z-index: 1;
-          opacity: 0;
-          transition: transform 1s ease-out;
-        }
-        
-        .image-container:hover::before {
-          opacity: 1;
-          transform: rotateZ(360deg);
-        }
+      .image-container img {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 0%;
+        left: -5%;
+        transition: transform 2s ease;
+      }
 
-        @keyframes rotateImage {
-          from {
-            transform: rotateZ(0deg);
-          }
-          to {
-            transform: rotateZ(180deg);
-          }
+      .image-container:hover img {
+        animation: rotateImage 1s linear forwards;
+      }
+
+      .image-container::before {
+        cursor: pointer;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 44%;
+        width: 3px;
+        height: 100%;
+        background-color: #2c1a06;
+        z-index: 1;
+        opacity: 0;
+        transition: transform 1s ease-out;
+      }
+
+      .image-container:hover::before {
+        opacity: 1;
+        transform: rotateZ(360deg);
+      }
+
+      @keyframes rotateImage {
+        from {
+          transform: rotateZ(0deg);
         }
-
-        img#discord:hover {
-          transform: rotate(1440deg);
-          transition: transform 5s ease;
+        to {
+          transform: rotateZ(180deg);
         }
+      }
 
-        .github {
-          position: relative;
-          width: 60px;
-          height: 60px;
-          &:hover {
-            #eye, #eye2 {
-              background-color: antiquewhite;
-              transition: background-color 0.5s ease;
-            }
-          }
-          #eye {
-            cursor: pointer;
-            position: absolute;
-            top: 25px;
-            left: 20px;
-            width: 6px;
-            height: 6px;
-            border-radius: 3px;
-            background-color: #2C1A06;
-            z-index: 2;
-          }
+      img#discord:hover {
+        transform: rotate(1440deg);
+        transition: transform 5s ease;
+      }
 
+      .github {
+        position: relative;
+        width: 60px;
+        height: 60px;
+        &:hover {
+          #eye,
           #eye2 {
-            cursor: pointer;
-            position: absolute;
-            top: 25px;
-            left: 37px;
-            width: 6px;
-            height: 6px;
-            border-radius: 3px;
-            background-color: #2C1A06;
-            z-index: 2;
+            background-color: antiquewhite;
+            transition: background-color 0.5s ease;
+          }
+        }
+        #eye {
+          cursor: pointer;
+          position: absolute;
+          top: 25px;
+          left: 20px;
+          width: 6px;
+          height: 6px;
+          border-radius: 3px;
+          background-color: #2c1a06;
+          z-index: 2;
+        }
+
+        #eye2 {
+          cursor: pointer;
+          position: absolute;
+          top: 25px;
+          left: 37px;
+          width: 6px;
+          height: 6px;
+          border-radius: 3px;
+          background-color: #2c1a06;
+          z-index: 2;
+        }
+      }
+
+      img#react {
+        transition: transform 5s ease;
+      }
+      img#react:hover {
+        transform: rotate(720deg);
+        transform-origin: center;
+      }
+      img#nextjs:hover {
+        background-image: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 1) 0%,
+          rgba(0, 0, 0, 0) 70%
+        );
+        transition: background-image 5s;
+      }
+
+      img#postgresql:hover {
+        transform: rotate(-35deg) translateX(5px);
+        transform-origin: center;
+        transition: 0.5s ease-out;
+      }
+
+      #python-logo {
+        max-width: 60vw;
+        max-height: 60vh;
+        padding: 5px;
+        overflow: visible;
+
+        path {
+          position: relative;
+          fill: transparent;
+          stroke-width: 5px;
+          transition: all 0.2s ease-in-out;
+
+          &:first-child {
+            stroke: #3670a0;
+            animation: border-move 2s linear forwards,
+              fill-first 1s 2s linear forwards;
+          }
+
+          &:last-child {
+            stroke: #fed140;
+            animation: border-move 2s linear forwards,
+              fill-second 1s 2s linear forwards;
           }
         }
 
+        &:hover {
+          path:first-child {
+            transform: translate(-4%, -4%);
+            text-shadow: 0 0 20px #3670a0;
+          }
+          path:last-child {
+            transform: translate(4%, 4%);
+            box-shadow: 0 0 20px #fed140;
+          }
+        }
+      }
 
-        img#react {
-            transition: transform 5s ease;
+      @keyframes border-move {
+        0% {
+          stroke-dasharray: 0 1600;
         }
-        img#react:hover {
-            transform: rotate(720deg);
-            transform-origin: center;
+        100% {
+          stroke-dasharray: 1600 1600;
         }
-        img#nextjs:hover {
-            background-image: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,0,0,0) 70%);
-            transition: background-image 5s;
-        }
+      }
 
-        img#postgresql:hover {
-            transform: rotate(-35deg) translateX(5px);
-            transform-origin: center;
-            transition: 0.5s ease-out;
+      @keyframes fill-first {
+        0% {
+          fill: transparent;
         }
+        100% {
+          fill: #3670a0;
+        }
+      }
 
-        #python-logo {
-            max-width: 60vw;
-            max-height: 60vh;
-            padding: 5px;
-            overflow: visible;
-            
-            path {
-              position: relative;
-              fill: transparent;
-              stroke-width: 5px;
-              transition: all .2s ease-in-out;
-              
-              &:first-child {
-                stroke: #3670A0;
-                animation: border-move 2s linear forwards, fill-first 1s 2s linear forwards;
-              }
-              
-              &:last-child {
-                stroke: #FED140;
-                animation: border-move 2s linear forwards, fill-second 1s 2s linear forwards;
-              }
-            }
-            
-            &:hover {
-              path:first-child {
-                transform: translate(-4%, -4%);
-                text-shadow: 0 0 20px #3670A0;
-              }
-              path:last-child {
-                transform: translate(4%, 4%);
-                box-shadow: 0 0 20px #FED140;
-              }
-            }
-          }
-          
-          @keyframes border-move {
-            0% {
-              stroke-dasharray: 0 1600;
-            }
-            100% {
-              stroke-dasharray: 1600 1600;
-            }
-          }
-          
-          @keyframes fill-first {
-            0% {
-              fill: transparent;
-            }
-            100% {
-              fill: #3670A0;
-            }
-          }
-          
-          @keyframes fill-second {
-            0% {
-              fill: transparent;
-            }
-            100% {
-              fill: #FED140;
-            }
-          }
+      @keyframes fill-second {
+        0% {
+          fill: transparent;
+        }
+        100% {
+          fill: #fed140;
+        }
+      }
     }
-    }
+  }
 }

@@ -30,7 +30,7 @@ body div nav .image-container::before {
   left: 44%;
   width: 3px;
   height: 100%;
-  background-color: #2C1A06;
+  background-color: #2c1a06;
   z-index: 1;
   opacity: 0;
   transition: transform 1s ease-out;
@@ -56,7 +56,8 @@ body div nav .github {
   width: 60px;
   height: 60px;
 }
-body div nav .github:hover #eye, body div nav .github:hover #eye2 {
+body div nav .github:hover #eye,
+body div nav .github:hover #eye2 {
   background-color: antiquewhite;
   transition: background-color 0.5s ease;
 }
@@ -68,7 +69,7 @@ body div nav .github #eye {
   width: 6px;
   height: 6px;
   border-radius: 3px;
-  background-color: #2C1A06;
+  background-color: #2c1a06;
   z-index: 2;
 }
 body div nav .github #eye2 {
@@ -79,7 +80,7 @@ body div nav .github #eye2 {
   width: 6px;
   height: 6px;
   border-radius: 3px;
-  background-color: #2C1A06;
+  background-color: #2c1a06;
   z-index: 2;
 }
 body div nav img#react {
@@ -111,20 +112,20 @@ body div nav #python-logo path {
   transition: all 0.2s ease-in-out;
 }
 body div nav #python-logo path:first-child {
-  stroke: #3670A0;
+  stroke: #3670a0;
   animation: border-move 2s linear forwards, fill-first 1s 2s linear forwards;
 }
 body div nav #python-logo path:last-child {
-  stroke: #FED140;
+  stroke: #fed140;
   animation: border-move 2s linear forwards, fill-second 1s 2s linear forwards;
 }
 body div nav #python-logo:hover path:first-child {
   transform: translate(-4%, -4%);
-  text-shadow: 0 0 20px #3670A0;
+  text-shadow: 0 0 20px #3670a0;
 }
 body div nav #python-logo:hover path:last-child {
   transform: translate(4%, 4%);
-  box-shadow: 0 0 20px #FED140;
+  box-shadow: 0 0 20px #fed140;
 }
 @keyframes border-move {
   0% {
@@ -139,7 +140,7 @@ body div nav #python-logo:hover path:last-child {
     fill: transparent;
   }
   100% {
-    fill: #3670A0;
+    fill: #3670a0;
   }
 }
 @keyframes fill-second {
@@ -147,7 +148,7 @@ body div nav #python-logo:hover path:last-child {
     fill: transparent;
   }
   100% {
-    fill: #FED140;
+    fill: #fed140;
   }
 }
 
@@ -164,7 +165,10 @@ body {
   padding: 0px;
 }
 body section#slider-section {
-  height: 1000px;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-top: 50px;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -172,15 +176,32 @@ body section#slider-section {
   gap: 20px;
 }
 body section#slider-section .container {
-  width: 1600px;
+  width: 100%;
+  max-width: 100vw;
   margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 body section#slider-section .container .subcontainer {
-  width: 85%;
+  width: 90%;
   margin: auto;
+  display: flex;
+  justify-content: center;
 }
 body section#slider-section .container .subcontainer .slider-wrapper {
   position: relative;
+  max-width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid white;
+}
+body section#slider-section .container .subcontainer .slider-wrapper #tns1-ow {
+  padding: 0 !important;
+  overflow: hidden;
+  max-width: 85%;
 }
 body section#slider-section .container .subcontainer .slider-wrapper #controls .previous,
 body section#slider-section .container .subcontainer .slider-wrapper #controls .next {
@@ -214,6 +235,7 @@ body #homeSection canvas {
   border: 1px solid black;
   z-index: 1;
   margin: 0px 0px;
+  max-width: 100vw;
 }
 body #name {
   color: #c874b2;
@@ -303,7 +325,7 @@ body button:hover::after {
   -webkit-clip-path: polygon(calc(100% - var(--border-width)) calc(100% - (var(--edge-size) + var(--border-width) * 0.5)), calc(100% - var(--border-width)) var(--border-width), calc(100% - var(--border-width)) var(--border-width), calc(100% - var(--border-width)) calc(100% - (var(--edge-size) + var(--border-width) * 0.5)), calc(100% - (var(--edge-size) + var(--border-width) * 0.5)) calc(100% - var(--border-width)), calc(100% - (var(--edge-size) + var(--border-width) * 0.5)) calc(100% - var(--border-width)));
           clip-path: polygon(calc(100% - var(--border-width)) calc(100% - (var(--edge-size) + var(--border-width) * 0.5)), calc(100% - var(--border-width)) var(--border-width), calc(100% - var(--border-width)) var(--border-width), calc(100% - var(--border-width)) calc(100% - (var(--edge-size) + var(--border-width) * 0.5)), calc(100% - (var(--edge-size) + var(--border-width) * 0.5)) calc(100% - var(--border-width)), calc(100% - (var(--edge-size) + var(--border-width) * 0.5)) calc(100% - var(--border-width)));
 }
-body div nav {
+body nav {
   background-color: #2c1a06;
   display: flex;
   flex-wrap: wrap;
@@ -314,7 +336,7 @@ body div nav {
   margin-top: -5px;
   padding: 10px;
 }
-body div nav .skill:hover {
+body nav .skill:hover {
   cursor: pointer;
 }
 body section#s1 {
@@ -322,7 +344,6 @@ body section#s1 {
   width: 100dvw;
   height: -moz-fit-content;
   height: fit-content;
-  min-height: 1000px;
   display: flex;
   justify-content: center;
 }
@@ -380,37 +401,38 @@ body section#s1 aside #text h2 {
 }
 
 @media screen and (max-width: 992px) {
-  body div section#s1 aside {
+  body section#s1 aside {
     flex-wrap: wrap;
     margin: 20px 10px;
     padding: 20px 0px;
   }
-  body div section#homeSection {
+  body section#homeSection {
     height: 600px;
   }
-  body div section#homeSection canvas {
+  body section#homeSection canvas {
     height: 600px;
     width: 100%;
   }
-  body div section#homeSection a {
+  body section#homeSection a {
     margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0;
     text-align: center;
   }
-  body div section#homeSection #explore {
+  body section#homeSection #explore {
     top: 25%;
   }
-  body div section#homeSection #projects {
+  body section#homeSection #projects {
     top: 35%;
   }
-  body div section#homeSection #contact {
+  body section#homeSection #contact {
     top: 45%;
   }
 }
 .tns-nav {
   text-align: right;
+  margin-bottom: 10px;
 }
 
 .tns-nav button {

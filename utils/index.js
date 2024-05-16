@@ -60,10 +60,44 @@ const skillsData = [
       "Use of meaningful classNames to identify elements",
     ],
   },
-  { title: "Javascript", description: "I can do react" },
-  { title: "Postgresql", description: "I can do react" },
-  { title: "Terminal", description: "I can do react" },
-  { title: "Python", description: "I can do react" },
+  {
+    title: "Javascript",
+    description:
+      "I am great at javascript and have a handle on Javacript classes, functions, Variable Scope, Asynchronous programming, callbacks, Arrow functions and control flow in javacript.",
+    bullets: [
+      "Variable Scope",
+      "Classes",
+      "Asynchronous Programming",
+      "Callbacks",
+      "Arrow Functions",
+      "Control Flow",
+      "object manipulation",
+    ],
+  },
+  {
+    title: "Postgresql",
+    description:
+      "I'm great at developing SQL databases. formulating precise queries to write, read, update or delete data stored in a postgres database. writing using raw SQL or using an ORM, creating related tables of data and declaring appropriately keys to sort and filter them. Validating data on CRUD operations",
+    bullets: [
+      "SQL CRUD Methods",
+      "Raw SQL",
+      "ORM queries",
+      "Database Relationships",
+      "Primary and Foriegn Key",
+      "Data validation",
+    ],
+  },
+  {
+    title: "Terminal",
+    description:
+      "I use Linux for my operating system and have extensive knowledge on how to develop applications in Linux using WSL.",
+    bullets: ["Linux Developer"],
+  },
+  {
+    title: "Python",
+    description:
+      "I have great understanding of python data types, loops, control statements and methods used in python.",
+  },
   { title: "React", description: "I can do react" },
   { title: "MongoDB", description: "I can do react" },
   { title: "NodeJS", description: "I can do react" },
@@ -154,13 +188,15 @@ function initializeSlider() {
   slider.innerHTML = cars;
 }
 
+// stupid little error with tns package if the width is over 1438px then the autowidth must be set to true or it breaks everything
 const tnslider = tns({
-  container: ".slider",
   autoWidth: true,
-  gutter: 15,
-  slideBy: 1,
-  nav: true,
-  speed: 400,
+  items: 3.3,
+  gutter: 10,
+  mouseDrag: true,
+  swipeAngle: false,
+  container: ".slider",
+  speed: 600,
   controlsContainer: "#controls",
   prevButton: ".previous",
   nextButton: ".next",
