@@ -173,7 +173,6 @@ body section#slider-section {
   justify-content: center;
   align-items: center;
   background: #06182c;
-  gap: 20px;
 }
 body section#slider-section .container {
   width: 100%;
@@ -184,19 +183,29 @@ body section#slider-section .container {
   align-items: center;
 }
 body section#slider-section .container .subcontainer {
-  width: 90%;
+  width: 78%;
   margin: auto;
   display: flex;
   justify-content: center;
 }
 body section#slider-section .container .subcontainer .slider-wrapper {
+  padding: 50px;
   position: relative;
-  max-width: 90%;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: 2px solid white;
+  border: 10px solid black;
+  border-radius: 50px;
+  background-color: silver;
+}
+body section#slider-section .container .subcontainer .slider-wrapper h2 {
+  font-family: "Sedan", serif;
+  font-size: 32px;
+  text-align: left;
+  color: black;
+  letter-spacing: 2px;
 }
 body section#slider-section .container .subcontainer .slider-wrapper #tns1-ow {
   padding: 0 !important;
@@ -374,14 +383,16 @@ body section#s1 aside #content h2 {
   text-align: center;
   font-family: "Sedan", serif;
   font-size: 32px;
-  color: silver;
+  font-weight: 400;
+  color: white;
   letter-spacing: 2px;
 }
 body section#s1 aside #content p {
   padding: 0px 20px;
   color: silver;
-  font-size: 22px;
-  letter-spacing: 1px;
+  font-family: "Arvo", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 body section#s1 aside #text {
   width: 50%;
@@ -463,4 +474,29 @@ body section#s1 aside #text h2 {
   .container {
     width: 100%;
   }
+}
+#tns1 > .tns-item {
+  width: 5%;
+  margin-left: 25px;
+  padding-right: 25px;
+  padding-left: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border: 10px solid #2c1a06;
+  border-radius: 50px;
+  background-color: white;
+}
+#tns1 > .tns-item h3 {
+  font-family: "Sedan", serif;
+  font-size: 22px;
+  text-align: left;
+  color: black;
+  letter-spacing: 2px;
+}
+#tns1 > .tns-item p,
+#tns1 > .tns-item ol {
+  color: black;
+  font-family: "Arvo", serif;
+  font-weight: 400;
+  font-style: normal;
 }/*# sourceMappingURL=index.css.map */

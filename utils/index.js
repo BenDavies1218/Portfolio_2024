@@ -51,7 +51,7 @@ const skillsData = [
   {
     title: "CSS",
     description:
-      "I have great knowledge with CSS Rules, how to style an element add animations / tranisitions to an element. Working with different types element display such as Flexbox and Grid. Working with variables to allow for easier coding and future editing.",
+      "I have great knowledge with CSS Rules, how to style an element add animations / tranisitions to an element. Working with different types of element display such as Flexbox and Grid. Working with variables to allow for easier coding and future editing.",
     bullets: [
       "CSS Variables",
       "Flexbox and Grid",
@@ -71,13 +71,13 @@ const skillsData = [
       "Callbacks",
       "Arrow Functions",
       "Control Flow",
-      "object manipulation",
+      "Object manipulation",
     ],
   },
   {
     title: "Postgresql",
     description:
-      "I'm great at developing SQL databases. formulating precise queries to write, read, update or delete data stored in a postgres database. writing using raw SQL or using an ORM, creating related tables of data and declaring appropriately keys to sort and filter them. Validating data on CRUD operations",
+      "I'm great at developing SQL databases. formulating precise queries to write, read, update or delete data stored in a postgres database. writing using raw SQL or using an ORM, creating related tables of data and declaring appropriate keys to sort and filter them. Validating data on CRUD operations",
     bullets: [
       "SQL CRUD Methods",
       "Raw SQL",
@@ -96,19 +96,72 @@ const skillsData = [
   {
     title: "Python",
     description:
-      "I have great understanding of python data types, loops, control statements and methods used in python.",
+      "I have a great understanding of Python data types, loops, control statements, and methods used in Python. I can write efficient code, debug effectively, and utilize Python libraries to enhance functionality in various projects.",
+    bullets: [
+      "Data types",
+      "Loops",
+      "Control statements",
+      "Methods",
+      "Libraries",
+      "Debugging & testing",
+    ],
   },
-  { title: "React", description: "I can do react" },
-  { title: "MongoDB", description: "I can do react" },
-  { title: "NodeJS", description: "I can do react" },
+  {
+    title: "React",
+    description:
+      "I am proficient in React, capable of building dynamic and responsive user interfaces. I have experience with React hooks, state management, and component-based architecture. I can integrate APIs and manage application state efficiently to create seamless user experiences.",
+    bullets: [
+      "Hooks",
+      "Statement management",
+      "Redux",
+      "Component Based Coding",
+      "Dynamic UI",
+      "API Intergration",
+      "Responsive Design",
+    ],
+  },
+  {
+    title: "MongoDB",
+    description:
+      "I have a solid understanding of MongoDB, including how to design schemas and perform CRUD operations. I can effectively use MongoDB for data storage in full-stack applications and ensure efficient data retrieval and manipulation.",
+    bullets: [
+      "Schema Design",
+      "CRUD operations",
+      "Queries",
+      "Data manipulation",
+    ],
+  },
+  {
+    title: "NodeJS",
+    description:
+      "I am skilled in NodeJS, able to create server-side applications using Express.js. I understand asynchronous programming, event-driven architecture and I can build RESTful APIs. My experience includes handling databases, managing sessions, implementing authentication and deployment to AWS",
+    bullets: [
+      "Server-side Development",
+      "ExpressJs",
+      "Asynchronous programming",
+      "RestfulAPI's",
+      "Authentication",
+      "Deployment to AWS",
+    ],
+  },
   {
     title: "NextJS",
-    description: "Next JS ",
+    description:
+      "I am always interested in exploring new and emerging techonolgies, I have writing applications in both vite and NextJs, I capable of building server-side rendered and statically generated React applications with both of these frameworks. I understand the benefits that NextJs and Vite can offer us in terms of SEO and performance.",
+    bullets: ["Server-side rendering", "SEO", "Routing"],
   },
   {
     title: "Sass (Syntactically Awesome Style Sheets)",
     description:
-      "I have a good knowledge of SASS syntax including nesting elements, variables, mixins and Inheritance. As of 2024 SASS has become a little obsolete though because normal CSS does allow us to use almost all the same features. But if I see SASS I know what it's, how it's written and how it's compile it in a project. ",
+      "I have a good knowledge of SASS syntax including nesting elements, variables, mixins and Inheritance. As of 2024 SASS has become a more obsolete because normal CSS allows us to use almost all the same features. But if I see SASS I know what it's, how it's written, how it's compile and how to structure it in a project. ",
+    bullets: [
+      "Nesting Elements",
+      "Variables",
+      "Mixins",
+      "Inheritance",
+      "Compiling",
+      "Project Intergration",
+    ],
   },
 ];
 
@@ -146,53 +199,120 @@ skillElements.forEach((element, index) => {
   });
 });
 
+// Images for the slider
+const scubaImage = new Image();
+scubaImage.src = "./utils/images/scubagame.png";
+
+const reactChatAppImage = new Image();
+reactChatAppImage.src = "./utils/images/reactchatapp.png";
+
+const dealOrNoDealImage = new Image();
+dealOrNoDealImage.src = "./utils/images/dealornodeal.png";
+
+const flaskImage = new Image();
+flaskImage.src = "./utils/images/flask.svg";
+
+// slider element
 const slider = document.querySelector(".slider");
-const carsObject = [
+const sliderObject = [
   {
-    img: "https://images.pexels.com/photos/9784188/pexels-photo-9784188.jpeg?cs=srgb&dl=pexels-mathias-reding-9784188.jpg&fm=jpg",
-    model: "FERRARI 296 GTS",
-    type: "coupe",
+    img: `${reactChatAppImage.src}`,
+    title: "Realtime React Chat Application",
+    description: "",
+    techStack: [],
+    link: "https://insta-chat2024.netlify.app/",
+    repository: "https://github.com/BenDavies1218/react-realtime-chatapp",
   },
   {
-    img: "https://images.pexels.com/photos/10292234/pexels-photo-10292234.jpeg?cs=srgb&dl=pexels-yoshi-10292234.jpg&fm=jpg",
-    model: "FERRARI SF90",
-    type: "coupe",
+    img: `${dealOrNoDealImage.src}`,
+    title: "Python Deal or No Deal Game",
+    description:
+      "This is a pure python terminal application, it shows my strengths with functions and control flow in python. After completing this I deploy this using a Node Express server an AWS EC2 instance, so now we can enjoy it in the browser too.",
+    techStack: ["Python"],
+    link: "http://52.63.47.231:3000/",
+    repository: "https://github.com/BenDavies1218/pythongame",
   },
   {
-    img: "https://images.pexels.com/photos/11202306/pexels-photo-11202306.jpeg?cs=srgb&dl=pexels-prat-clement-11202306.jpg&fm=jpg",
-    model: "FERRARI F60 America",
-    type: "coupe",
+    img: `${flaskImage.src}`,
+    title: "Recipe Webserver Api",
+    description: "Build with Python ",
+    techStack: ["Python", "Flask", "Postgres"],
+    link: "",
+    repository: "https://github.com/BenDavies1218/Flask_Recipe_Webserver",
   },
   {
-    img: "https://images.pexels.com/photos/8171898/pexels-photo-8171898.jpeg?cs=srgb&dl=pexels-eriks-abzinovs-8171898.jpg&fm=jpg",
-    model: "FERRARI F8",
-    type: "hatchback",
+    img: `${scubaImage.src}`,
+    title: "ScubaEscape Game",
+    description: "",
+    techStack: ["HTML", "CSS", "Javascript"],
+    link: "https://scuba-escape.netlify.app/",
+    repository: "https://github.com/BenDavies1218/ScubaEscape",
+  },
+  {
+    img: `${scubaImage.src}`,
+    title: "Agile Managment Python Webserver",
+    description: "Bases on the application trello ",
+    techStack: ["Python", "Flask", "PostgresSQL"],
+    link: "",
+    repository:
+      "https://github.com/BenDavies1218/Agile_management_system_Webserver",
+  },
+  {
+    img: `${scubaImage.src}`,
+    title: "React Dynamic Forms",
+    description: "",
+    techStack: ["HTML", "CSS", "Javascript"],
+    link: "https://scuba-escape.netlify.app/",
+    repository: "https://github.com/BenDavies1218/ScubaEscape",
   },
 ];
 
 window.addEventListener("load", initializeSlider());
 
 function initializeSlider() {
-  let cars = "";
-  for (let car in carsObject) {
-    cars += `<div class="slide">
-              <img src="${carsObject[car].img}"
-                alt="image">
-              <br><br>
-              <div>
-                <h3>${carsObject[car].model}</h3>
-                <p>${carsObject[car].type}</p>
-              </div>
-            </div>`;
+  let content = [];
+  for (let index in sliderObject) {
+    let techStackItems = sliderObject[index].techStack;
+    techStackItems = techStackItems.map((tech) => `<li>${tech}</li>`).join("");
+    let slideContent = `
+      <div class="slide">
+        ${
+          sliderObject[index].link
+            ? `<a href="${sliderObject[index].link}" target="_blank">`
+            : `<a href="${sliderObject[index].repository}" target="_blank">`
+        }
+        <img src="${sliderObject[index].img}" alt="image">
+        ${
+          sliderObject[index].link || sliderObject[index].repository
+            ? `</a>`
+            : ""
+        }
+        <br><br>
+        <div>
+          <h3>${sliderObject[index].title}</h3>
+          <p>${sliderObject[index].description}</p>
+          <ul>
+            ${techStackItems}
+          </ul>
+          ${
+            sliderObject[index].repository
+              ? `<a href="${sliderObject[index].repository}" target="_blank">Repository Link</a>`
+              : ""
+          }
+        </div>
+      </div>
+    `;
+    content.push(slideContent);
   }
-  slider.innerHTML = cars;
+  slider.innerHTML = content.join("");
 }
 
-// stupid little error with tns package if the width is over 1438px then the autowidth must be set to true or it breaks everything
+// Slider configuration
+// Stupid little error with tns package if the width is over 1438px then the autowidth must be set to false or it breaks everything
 const tnslider = tns({
-  autoWidth: true,
-  items: 3.3,
-  gutter: 10,
+  autoWidth: false,
+  items: 3,
+  gutter: 25,
   mouseDrag: true,
   swipeAngle: false,
   container: ".slider",
