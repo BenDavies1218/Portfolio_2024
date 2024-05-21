@@ -212,14 +212,18 @@ dealOrNoDealImage.src = "./utils/images/dealornodeal.png";
 const flaskImage = new Image();
 flaskImage.src = "./utils/images/flask.svg";
 
+const trelloImage = new Image();
+trelloImage.src = "./utils/images/trello.png";
+
 // slider element
 const slider = document.querySelector(".slider");
 const sliderObject = [
   {
     img: `${reactChatAppImage.src}`,
-    title: "Realtime React Chat Application",
-    description: "",
-    techStack: [],
+    title: "Realtime Chat Application",
+    description:
+      "I developed a real-time chat application similar to WhatsApp. This application allows users to create accounts, log in, add contacts, send and receive messages, and block other users. This major project highlights my skills in creating styled, dynamic React components, managing persistent data storage in a database, implementing authentication and handling global state management.",
+    techStack: ["ReactJS", "HTML", "CSS", "Google Firebase", "Netlify"],
     link: "https://insta-chat2024.netlify.app/",
     repository: "https://github.com/BenDavies1218/react-realtime-chatapp",
   },
@@ -233,10 +237,26 @@ const sliderObject = [
     repository: "https://github.com/BenDavies1218/pythongame",
   },
   {
+    img: `${scubaImage.src}`,
+    title: "CSS Theme Generator",
+    description:
+      "I developed a free theme generator for front-end web development. This tool enables individuals to accelerate their development process by generating a color palette based on their chosen color. This project demonstrates my proficiency in using local storage, Node packages, React component-based UI and modern coding principles.",
+    techStack: ["ReactJS", "HTML", "CSS"],
+    link: "https://scuba-escape.netlify.app/",
+    repository: "https://github.com/BenDavies1218/ScubaEscape",
+  },
+  {
     img: `${flaskImage.src}`,
     title: "Recipe Webserver Api",
     description: "Build with Python ",
-    techStack: ["Python", "Flask", "Postgres"],
+    techStack: [
+      "Python",
+      "SQL",
+      "Flask",
+      "Postgres",
+      "SQLAlchmey",
+      "Marshmallow",
+    ],
     link: "",
     repository: "https://github.com/BenDavies1218/Flask_Recipe_Webserver",
   },
@@ -249,7 +269,7 @@ const sliderObject = [
     repository: "https://github.com/BenDavies1218/ScubaEscape",
   },
   {
-    img: `${scubaImage.src}`,
+    img: `${trelloImage.src}`,
     title: "Agile Managment Python Webserver",
     description: "Bases on the application trello ",
     techStack: ["Python", "Flask", "PostgresSQL"],
@@ -259,7 +279,7 @@ const sliderObject = [
   },
   {
     img: `${scubaImage.src}`,
-    title: "React Dynamic Forms",
+    title: "React Blog Creator",
     description: "",
     techStack: ["HTML", "CSS", "Javascript"],
     link: "https://scuba-escape.netlify.app/",
@@ -295,6 +315,12 @@ function initializeSlider() {
             ${techStackItems}
           </ul>
           ${
+            sliderObject[index].link
+              ? `<a href="${sliderObject[index].link}"> Deployment Link`
+              : ""
+          }
+          <br><br>
+          ${
             sliderObject[index].repository
               ? `<a href="${sliderObject[index].repository}" target="_blank">Repository Link</a>`
               : ""
@@ -311,7 +337,7 @@ function initializeSlider() {
 // Stupid little error with tns package if the width is over 1438px then the autowidth must be set to false or it breaks everything
 const tnslider = tns({
   autoWidth: false,
-  items: 3,
+  items: 3.2,
   gutter: 25,
   mouseDrag: true,
   swipeAngle: false,
