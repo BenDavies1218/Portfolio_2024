@@ -23,15 +23,18 @@
   </head>
   <body>
     <section id="homeSection">
-      <h1 id="name">BENJAMIN DAVIES</h1>
+      <h1 id="name" class="loadElement">BENJAMIN DAVIES</h1>
+      <div class="containerforloading">
+        <div class="text">Loading...</div>
+      </div>
       <canvas></canvas>
-      <a href="#icon-nav" id="explore">
+      <a href="#icon-nav" id="explore" class="loadElement">
         <button class="button">Explore</button>
       </a>
-      <a href="#slider-section" id="projects">
+      <a href="#slider-section" id="projects" class="loadElement">
         <button class="button">Projects</button>
       </a>
-      <a href="#" id="contact">
+      <a href=".contact" id="contact" class="loadElement">
         <button class="button">Contact Me</button>
       </a>
     </section>
@@ -180,7 +183,7 @@
         </div>
       </div>
     </section>
-    <div class="contact" style="height: 800px">
+    <div class="contact" id="contactSection">
       <form
         name="contact"
         method="POST"
@@ -188,40 +191,45 @@
         onSubmit="submit"
         data-netlify-honeypot="bot-field"
       >
+        <h2>Contact</h2>
         <input name="bot-field" class="d-none" />
         <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Name</label>
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" name="name" required />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
           <input
             type="text"
             class="form-control"
-            id="exampleFormControlInput1"
-            name="name"
+            id="email"
+            name="email"
+            required
           />
         </div>
         <div class="mb-3">
-          <label for="exampleFormControlInput2" class="form-label"
-            >Company</label
-          >
+          <label for="company" class="form-label">Company</label>
           <input
             type="text"
             class="form-control"
-            id="exampleFormControlInput2"
+            id="company"
             placeholder="Optional"
             name="company"
           />
         </div>
         <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label"
-            >Message</label
-          >
+          <label for="message" class="form-label">Message</label>
           <textarea
             class="form-control"
-            id="exampleFormControlTextarea1"
+            id="message"
             rows="3"
             name="info"
+            required
           ></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <div id="submit-btn">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
       </form>
     </div>
     <script src="./utils/index.js"></script>

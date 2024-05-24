@@ -232,8 +232,8 @@ const sliderObject = [
     title: "Python Deal or No Deal Game",
     description:
       "This is a pure python terminal application, it shows my strengths with functions and control flow in python. After completing this I deploy this using a Node Express server an AWS EC2 instance, so now we can enjoy it in the browser too.",
-    techStack: ["Python"],
-    link: "http://52.63.47.231:3000/",
+    techStack: ["Python", "AWS & Express (for deployment)"],
+    link: "http://13.211.129.98:3000/",
     repository: "https://github.com/BenDavies1218/pythongame",
   },
   {
@@ -241,7 +241,7 @@ const sliderObject = [
     title: "CSS Theme Generator",
     description:
       "I developed a free theme generator for front-end web development. This tool enables individuals to accelerate their development process by generating a color palette based on their chosen color. This project demonstrates my proficiency in using local storage, Node packages, React component-based UI and modern coding principles.",
-    techStack: ["ReactJS", "HTML", "CSS"],
+    techStack: ["ReactJS", "ViteJS", "HTML", "CSS", "Node", "Netlify"],
     link: "https://scuba-escape.netlify.app/",
     repository: "https://github.com/BenDavies1218/ScubaEscape",
   },
@@ -279,7 +279,7 @@ const sliderObject = [
   },
   {
     img: `${scubaImage.src}`,
-    title: "React Blog Creator",
+    title: "Blog Creator",
     description: "",
     techStack: ["HTML", "CSS", "Javascript"],
     link: "https://scuba-escape.netlify.app/",
@@ -337,7 +337,7 @@ function initializeSlider() {
 // Stupid little error with tns package if the width is over 1438px then the autowidth must be set to false or it breaks everything
 const tnslider = tns({
   autoWidth: false,
-  items: 3.2,
+  items: 2.5,
   gutter: 25,
   mouseDrag: true,
   swipeAngle: false,

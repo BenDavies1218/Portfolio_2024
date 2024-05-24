@@ -14,6 +14,39 @@ body {
   margin: 0px 0px;
   padding: 0px;
 
+  .contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #06182c;
+    border: 2px solid#06182c;
+    padding: 10vw;
+
+    form {
+      width: 80%;
+      max-width: 30vw;
+      border: 10px solid black;
+      border-radius: 50px;
+      background-color: silver;
+      padding: 50px;
+
+      h2 {
+        font-family: "Sedan", serif;
+        font-size: 32px;
+        text-align: left;
+        color: black;
+        letter-spacing: 2px;
+        align-self: center;
+      }
+
+      #submit-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
   section#slider-section {
     height: fit-content;
     padding-top: 50px;
@@ -102,11 +135,30 @@ body {
   }
 
   #homeSection {
-    canvas {
-      border: 1px solid black;
-      z-index: 1;
-      margin: 0px 0px;
-      max-width: 100vw;
+    position: relative;
+
+    .loadElement {
+      opacity: 0;
+    }
+    .container {
+      background-color: white;
+      text-align: center;
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      left: 0;
+      right: 0;
+      margin: auto;
+
+      .text {
+        padding-top: 30vh;
+      }
+
+      canvas {
+        z-index: 1;
+        margin: 0px 0px;
+        max-width: 100vw;
+      }
     }
   }
   #name {
@@ -114,6 +166,7 @@ body {
     font-size: 48px;
     font-family: Dune Rise;
     position: absolute;
+    margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
     left: 0;

@@ -110,13 +110,28 @@ function init() {
 
 init();
 
+let loadElements = document.getElementsByClassName("loadElement");
+let loadScreen = document.getElementsByClassName("containerforloading");
+let loadText = document.getElementsByClassName("text");
+
 function animate() {
+  canvas.style.opacity = 0;
   requestAnimationFrame(animate);
   c.clearRect(0, 0, innerWidth, innerHeight);
   new Background(spaceImage, 0, 0).draw();
   for (let i = 0; i < circleArray.length; i++) {
     circleArray[i].update();
   }
+  canvas.style.opacity = 1;
+  [...loadElements].forEach((element) => {
+    element.style.opacity = 1;
+  });
+  [...loadScreen].forEach((element) => {
+    element.remove();
+  });
+  [...loadText].forEach((element) => {
+    element.remove();
+  });
 }
 
 animate();
