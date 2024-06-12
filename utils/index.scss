@@ -11,6 +11,7 @@ html {
 }
 
 body {
+  position: relative;
   margin: 0px 0px;
   padding: 0px;
 
@@ -317,6 +318,7 @@ body {
       margin: 50px 0%;
 
       #content {
+        margin-top: 90px;
         min-width: 300px;
         width: 50%;
         background-color: #06182c;
@@ -345,6 +347,10 @@ body {
 
       #text {
         width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         p {
           color: black;
           font-family: "Arvo", serif;
@@ -359,9 +365,27 @@ body {
           color: black;
           letter-spacing: 2px;
         }
+        img {
+          width: 500px;
+          height: auto;
+          clip-path: xywh(0 5px 100% 75% round 15% 0);
+        }
       }
     }
   }
+}
+
+/* Footer styling */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 2;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.8);
 }
 
 @media screen and (max-width: 992px) {
