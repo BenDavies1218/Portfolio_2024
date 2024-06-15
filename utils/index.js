@@ -22,6 +22,7 @@ const skillsData = [
       "Branch Management",
       "Commit Documentation",
       "Deployment from Git",
+      "Automated Testing with Github Actions",
     ],
   },
   {

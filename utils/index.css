@@ -273,6 +273,9 @@ body section#slider-section .container .subcontainer .slider-wrapper #controls i
 body #homeSection {
   position: relative;
 }
+body #homeSection .containerforloading {
+  height: 100vh;
+}
 body #homeSection .loadElement {
   opacity: 0;
 }
@@ -295,6 +298,7 @@ body #homeSection .container canvas {
   max-width: 100vw;
 }
 body #name {
+  height: 100vh;
   color: #c874b2;
   font-size: 48px;
   font-family: Dune Rise;

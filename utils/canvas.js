@@ -116,6 +116,7 @@ let loadText = document.getElementsByClassName("text");
 
 function animate() {
   canvas.style.opacity = 0;
+
   requestAnimationFrame(animate);
   c.clearRect(0, 0, innerWidth, innerHeight);
   new Background(spaceImage, 0, 0).draw();

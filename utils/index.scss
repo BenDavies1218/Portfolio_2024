@@ -138,6 +138,10 @@ body {
   #homeSection {
     position: relative;
 
+    .containerforloading {
+      height: 100vh;
+    }
+
     .loadElement {
       opacity: 0;
     }
@@ -163,6 +167,7 @@ body {
     }
   }
   #name {
+    height: 100vh;
     color: #c874b2;
     font-size: 48px;
     font-family: Dune Rise;
