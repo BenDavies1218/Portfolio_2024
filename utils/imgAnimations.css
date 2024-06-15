@@ -148,37 +148,4 @@ body div nav #python-logo:hover path:last-child {
   100% {
     fill: #fed140;
   }
-}
-
-footer .github {
-  position: relative;
-  width: 60px;
-  height: 60px;
-}
-footer .github:hover #eye,
-footer .github:hover #eye2 {
-  background-color: antiquewhite;
-  transition: background-color 0.5s ease;
-}
-footer .github #eye {
-  cursor: pointer;
-  position: absolute;
-  top: 25px;
-  left: 20px;
-  width: 6px;
-  height: 6px;
-  border-radius: 3px;
-  background-color: #2c1a06;
-  z-index: 2;
-}
-footer .github #eye2 {
-  cursor: pointer;
-  position: absolute;
-  top: 25px;
-  left: 37px;
-  width: 6px;
-  height: 6px;
-  border-radius: 3px;
-  background-color: #2c1a06;
-  z-index: 2;
 }/*# sourceMappingURL=imgAnimations.css.map */
