@@ -686,7 +686,8 @@ footer #navContainer #linkedinFooter #circle {
 }
 
 .slide img {
-  width: 100%;
+  margin-left: 25%;
+  width: 50%;
   height: 275px;
 }
 

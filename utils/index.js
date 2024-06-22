@@ -216,6 +216,9 @@ flaskImage.src = "./utils/images/flask.svg";
 const trelloImage = new Image();
 trelloImage.src = "./utils/images/trello.png";
 
+const cssThemeGen = new Image();
+cssThemeGen.src = "./utils/images/css-theme-gen.png";
+
 // slider element
 const slider = document.querySelector(".slider");
 const sliderObject = [
@@ -238,18 +241,19 @@ const sliderObject = [
     repository: "https://github.com/BenDavies1218/pythongame",
   },
   {
-    img: `${scubaImage.src}`,
+    img: `${cssThemeGen.src}`,
     title: "CSS Theme Generator",
     description:
       "I developed a free theme generator for front-end web development. This tool enables individuals to accelerate their development process by generating a color palette based on their chosen color. This project demonstrates my proficiency in using local storage, Node packages, React component-based UI and modern coding principles.",
     techStack: ["ReactJS", "ViteJS", "HTML", "CSS", "Node", "Netlify"],
-    link: "https://scuba-escape.netlify.app/",
-    repository: "https://github.com/BenDavies1218/ScubaEscape",
+    link: "https://css-colour-palette-generator.netlify.app/",
+    repository: "https://github.com/BenDavies1218/css-colour-palette-generator",
   },
   {
     img: `${flaskImage.src}`,
     title: "Recipe Webserver Api",
-    description: "Build with Python ",
+    description:
+      "Inspired by my background in hospitality, this API allows users to store there recipes. Users can also write reviews for other peoples recipes as well. This API taught me about applying decorator functions (Middleware functions) in pyhton, creating Restful API's that allow for all full CRUD operations and working with PostgresQl / SQL databases.",
     techStack: [
       "Python",
       "SQL",
@@ -264,7 +268,8 @@ const sliderObject = [
   {
     img: `${scubaImage.src}`,
     title: "ScubaEscape Game",
-    description: "",
+    description:
+      "HTML5 canvas game build with javascript!<br> The inspiration for the game comes from my love of scuba diving. Players are trapped in a submersible with there air rapidly running out, you must find a way out before you run out of air. Like real diving as you verture deeper the air you consume increases. This project demonstrates my vanilla javascript knowledge of classes and how I can create functions within these class.",
     techStack: ["HTML", "CSS", "Javascript"],
     link: "https://scuba-escape.netlify.app/",
     repository: "https://github.com/BenDavies1218/ScubaEscape",
@@ -272,20 +277,28 @@ const sliderObject = [
   {
     img: `${trelloImage.src}`,
     title: "Agile Managment Python Webserver",
-    description: "Bases on the application trello ",
-    techStack: ["Python", "Flask", "PostgresSQL"],
+    description:
+      "Bases on the application trello this API allows users to create cards and tasks, this includes adding users to cards and creating a list tasks. This API demonstrates the my use a SQL databases and adding validation to JSON data, CRUD operations and creating Restful API's.",
+    techStack: [
+      "Python",
+      "SQL",
+      "Flask",
+      "Postgres",
+      "SQLAlchmey",
+      "Marshmallow",
+    ],
     link: "",
     repository:
       "https://github.com/BenDavies1218/Agile_management_system_Webserver",
   },
-  {
-    img: `${scubaImage.src}`,
-    title: "Blog Creator",
-    description: "",
-    techStack: ["HTML", "CSS", "Javascript"],
-    link: "https://scuba-escape.netlify.app/",
-    repository: "https://github.com/BenDavies1218/ScubaEscape",
-  },
+  // {
+  //   img: `${scubaImage.src}`,
+  //   title: "Blog Creator",
+  //   description: "",
+  //   techStack: ["HTML", "CSS", "Javascript"],
+  //   link: "https://scuba-escape.netlify.app/",
+  //   repository: "https://github.com/BenDavies1218/ScubaEscape",
+  // },
 ];
 
 window.addEventListener("load", initializeSlider());
@@ -338,7 +351,7 @@ function initializeSlider() {
 // Stupid little error with tns package if the width is over 1438px then the autowidth must be set to false or it breaks everything
 const tnslider = tns({
   autoWidth: false,
-  items: 2.5,
+  items: 1.3,
   gutter: 25,
   mouseDrag: true,
   swipeAngle: false,
